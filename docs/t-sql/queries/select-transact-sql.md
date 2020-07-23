@@ -124,7 +124,7 @@ SELECT <select_criteria>
  Les étapes suivantes indiquent l'ordre de traitement logique, ou ordre de liaison, d'une instruction SELECT. Cet ordre détermine à quel moment les objets définis au cours d'une étape deviennent disponibles pour les clauses des étapes suivantes. Par exemple, si le processeur de requêtes peut se lier (accéder) aux tables ou vues définies dans la clause FROM, ces objets et leurs colonnes deviennent disponibles pour toutes les étapes suivantes. À l'inverse, puisque la clause SELECT correspond à l'étape 8, aucun alias de colonne ni aucune colonne dérivée défini(e) dans cette clause ne peut être référencé(e) par les clauses précédentes. Cependant, ils peuvent être référencés par les clauses suivantes telles que la clause ORDER BY. L’exécution physique réelle de l’instruction est déterminée par le processeur de requêtes, et l’ordre peut différer de cette liste.  
   
 1.  FROM  
-2.  ACTIVÉ  
+2.  ON  
 3.  JOIN  
 4.  WHERE  
 5.  GROUP BY  
@@ -133,7 +133,7 @@ SELECT <select_criteria>
 8.  SELECT  
 9. DISTINCT  
 10. ORDER BY  
-11. Haut de la page  
+11. TOP  
 
 > [!WARNING]
 > La séquence précédente est généralement celle qui est appliquée. Toutefois, dans certains cas rares, la séquence peut s’exécuter différemment.
